@@ -17,25 +17,42 @@ header {
     padding: 15px 0;
 }
 
-nav ul {
-    list-style: none;
+.nav {
     display: flex;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    height: 40px;
+    
 }
 
-nav li {
-    margin-right: 30px;
+.nav-element {
+    height: 30px;
+    width:60px;
+    align-items: center;
+    padding: 20px;
 }
 
+.nav-element:hover {
+   background-color: #190464;
+}
+/* .nav div { */
+    /* margin-right: 30px; */
+    /* background-color:rgb(16, 139, 139) */
+/* } */
 
-nav a {
+
+div a {
     text-decoration: none;
     color: white;
     font-weight: bold;
     transition: color 0.3s ease;
+
 }
 
-nav a:hover {
+div a:hover {
     color: #f39c12;
+    
 }
 
 main {
