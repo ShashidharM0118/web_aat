@@ -7,7 +7,7 @@ body {
       height: 100vh;
       margin: 0;
     }
-
+    
     .grid-container {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -23,7 +23,11 @@ body {
       border-radius: 10px;
       text-align: center;
       padding: 20px;
+<<<<<<< HEAD
       font-size: 20px;
+=======
+
+>>>>>>> 7204c5deb23a2bdfe807d3d0be280997b062b6c4
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       transition: transform 0.2s, box-shadow 0.3s;
       

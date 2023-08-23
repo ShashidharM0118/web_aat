@@ -10,7 +10,18 @@ const gridContainer = document.querySelector('.grid-container');
   });
   const grids = document.querySelectorAll("div");
 
+<<<<<<< HEAD
   //Generate the random function
+=======
+  app.addEventListener("click", function (event) {
+    const clickedElement = event.target;
+    if (clickedElement.classList.contains("grid-item")) {
+      const number = clickedElement.dataset.number;
+      clickedElement.textContent = number; // Display the number
+    }
+  });
+
+>>>>>>> 7204c5deb23a2bdfe807d3d0be280997b062b6c4
   function randomNumbersGenerator(size,max) {
     const result = [];
     const trackNumbers = new Set();
