@@ -1,41 +1,47 @@
 const gridContainer = document.querySelector('.grid-container');
-  
-  // Generate an array of numbers
-  const numbersArray = Array.from({ length: 25 }, (_, i) => i + 1);
-  
+
   // Populate the grid with the numbers
-  const randomNumbersArray = randomNumbersGenerator(25,25);
+  const randomNumbersArray = randomNumbersGenerator(16,16);
   randomNumbersArray.forEach(number => {
     const gridItem = document.createElement('div');
     gridItem.className = 'grid-item';
     gridItem.textContent = number;
     gridContainer.appendChild(gridItem);
   });
+  const grids = document.querySelectorAll("div");
 
-  app.addEventListener("click", function (event) {
-    const clickedElement = event.target;
-    if (clickedElement.classList.contains("grid-item")) {
-      const number = clickedElement.dataset.number;
-      clickedElement.textContent = number; // Display the number
-    }
-  });
-
-
+  //Generate the random function
   function randomNumbersGenerator(size,max) {
     const result = [];
-    const trackNumers = new Set();
-  
+    const trackNumbers = new Set();
     while (result.length < size) {
       const generateRandomNumbers = Math.floor(Math.random() * (max)) + 1;
-  
-      if (!trackNumers.has(generateRandomNumbers)) {
+      if (!trackNumbers.has(generateRandomNumbers)) {
         result.push(generateRandomNumbers);
-        trackNumers.add(generateRandomNumbers);
+        trackNumbers.add(generateRandomNumbers);
       }
     }
-  
     return result;
   }
-  
-  
+
+  const gridItems = document.querySelectorAll('.grid-item');
+  setTimeout(() => {
+    gridItems.forEach(item => {
+      item.style.fontSize = '0px';
+    });
+  } ,10000)
+
+  let tracker= 0;
+  gridItems.forEach(item => {
+    item.addEventListener("click", () => {
+      if(item.textContent-tracker == 1){
+        item.style.backgroundColor= 'green';
+      }else{
+        item.style.backgroundColor= 'red';
+      }
+      tracker = item.textContent;
+      item.style.fontSize = '20px';
+    })
+  })
+
 

@@ -10,21 +10,24 @@ body {
 
     .grid-container {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
       gap: 20px;
       padding: 40px;
+      
     }
-
+    
     .grid-item {
-      background-color: #3498db;
+      background-color: #3c88ba;
       color: #ffffff;
       border-radius: 10px;
       text-align: center;
       padding: 20px;
-      
+      font-size: 20px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+      transition: transform 0.2s, box-shadow 0.3s;
+      
+}
 
     .grid-item:hover {
       transform: scale(1.06);
