@@ -1,40 +1,55 @@
 body {
       font-family: Arial, sans-serif;
       background-color: #f5f5f5;
-      display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
       margin: 0;
     }
-    
+
     .grid-container {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(4, 1fr);
+      width: 50px;
+      margin-left: 25%;
+      margin-top: 5%;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
       gap: 20px;
       padding: 40px;
-      
     }
-    
     .grid-item {
       background-color: #3c88ba;
       color: #ffffff;
       border-radius: 10px;
       text-align: center;
       padding: 20px;
-<<<<<<< HEAD
       font-size: 20px;
-=======
-
->>>>>>> 7204c5deb23a2bdfe807d3d0be280997b062b6c4
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       transition: transform 0.2s, box-shadow 0.3s;
-      
 }
 
     .grid-item:hover {
       transform: scale(1.06);
       box-shadow: 0 4px 8px rgba(255, 10, 10, 0.2);
       background-color: rgb(99, 99, 244);
+    }
+
+
+    @keyframes shake {
+      0%, 100% {
+        transform: translateX(0);
+      }
+      10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+      }
+      20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+      }
+    }
+    
+  
+    .shake {
+      animation-name: shake;
+      animation-duration: 0.5s;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in-out;
     }

@@ -3,7 +3,7 @@
     padding: 0;
 }
 .cont{
-    background-image: url("brain.jpg" );
+    background-image: url("../img/brain.jpg" );
     background-repeat: no-repeat;
     background-size: cover;
     /* opacity: 0.7; */

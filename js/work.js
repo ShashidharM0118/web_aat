@@ -1,7 +1,7 @@
 const gridContainer = document.querySelector('.grid-container');
 
-  // Populate the grid with the numbers
-  const randomNumbersArray = randomNumbersGenerator(16,16);
+  // Organize the grid with the numbers
+  const randomNumbersArray = randomNumbersGenerator(9,9);
   randomNumbersArray.forEach(number => {
     const gridItem = document.createElement('div');
     gridItem.className = 'grid-item';
@@ -10,18 +10,7 @@ const gridContainer = document.querySelector('.grid-container');
   });
   const grids = document.querySelectorAll("div");
 
-<<<<<<< HEAD
   //Generate the random function
-=======
-  app.addEventListener("click", function (event) {
-    const clickedElement = event.target;
-    if (clickedElement.classList.contains("grid-item")) {
-      const number = clickedElement.dataset.number;
-      clickedElement.textContent = number; // Display the number
-    }
-  });
-
->>>>>>> 7204c5deb23a2bdfe807d3d0be280997b062b6c4
   function randomNumbersGenerator(size,max) {
     const result = [];
     const trackNumbers = new Set();
@@ -35,6 +24,7 @@ const gridContainer = document.querySelector('.grid-container');
     return result;
   }
 
+  //Time delay to show the numbers
   const gridItems = document.querySelectorAll('.grid-item');
   setTimeout(() => {
     gridItems.forEach(item => {
@@ -42,17 +32,35 @@ const gridContainer = document.querySelector('.grid-container');
     });
   } ,10000)
 
+  //On click logic
   let tracker= 0;
+  let firstChance = true;
+  let currentScore = 0;
   gridItems.forEach(item => {
     item.addEventListener("click", () => {
       if(item.textContent-tracker == 1){
         item.style.backgroundColor= 'green';
-      }else{
-        item.style.backgroundColor= 'red';
+        tracker++;
+        currentScore += 10;
+        item.style.fontSize = '20px';
       }
-      tracker = item.textContent;
-      item.style.fontSize = '20px';
+      else{
+        if(firstChance){
+          shakeButton.classList.add('shake');
+          setTimeout(() => {
+            shakeButton.classList.remove('shake');
+          }, 500);
+          firstChance = false;
+        }
+        else{
+        item.style.backgroundColor= 'red';
+        currentScore -=5;
+        item.style.fontSize = '20px';
+        }
+      }
     })
+    console.log(currentScore);
   })
+
 
 
