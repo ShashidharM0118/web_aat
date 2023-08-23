@@ -7,7 +7,7 @@ body {
       height: 100vh;
       margin: 0;
     }
-
+    
     .grid-container {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -21,7 +21,7 @@ body {
       border-radius: 10px;
       text-align: center;
       padding: 20px;
-      
+
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s, box-shadow 0.3s;
     }

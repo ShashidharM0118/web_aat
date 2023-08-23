@@ -20,7 +20,6 @@ const gridContainer = document.querySelector('.grid-container');
     }
   });
 
-
   function randomNumbersGenerator(size,max) {
     const result = [];
     const trackNumers = new Set();
@@ -33,7 +32,6 @@ const gridContainer = document.querySelector('.grid-container');
         trackNumers.add(generateRandomNumbers);
       }
     }
-  
     return result;
   }
   
