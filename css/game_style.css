@@ -5,26 +5,35 @@ body {
       align-items: center;
       margin: 0;
     }
-
+    .container-fluid{
+      display:flex
+    }
     .grid-container {
       display: grid;
-      width: 50px;
-      margin-left: 25%;
+      
+      margin-left: 20%;
       margin-top: 5%;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, 1fr);
+      margin-right:12%;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
       gap: 20px;
       padding: 40px;
     }
     .grid-item {
-      background-color: #3c88ba;
-      color: #ffffff;
+      width: 60px;
+     height: 60px;
+      background-color: #072a41;
+      color: #fdfdfd;
       border-radius: 10px;
-      text-align: center;
+      text-align:center;
       padding: 20px;
-      font-size: 20px;
+      font-size: px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s, box-shadow 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
+      -webkit-transition: transform 0.3s, box-shadow 0.3s;
+      -moz-transition: transform 0.3s, box-shadow 0.3s;
+      -ms-transition: transform 0.3s, box-shadow 0.3s;
+      -o-transition: transform 0.3s, box-shadow 0.3s;
 }
 
     .grid-item:hover {
@@ -53,3 +62,16 @@ body {
       animation-iteration-count: 1;
       animation-timing-function: ease-in-out;
     }
+
+    #timer {
+      font-size: 100px;
+      text-align: center;
+    }
+    .scoreboard{
+      margin-top: 10%;
+      display:inline-block
+    }
+    .timer-note{
+      font-size: 30px;
+    }
+    

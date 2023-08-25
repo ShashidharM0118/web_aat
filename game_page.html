@@ -4,49 +4,34 @@
   <title>Document</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
+  <nav class="navbar ">
+    <div class="navbar-header">
+      <a class="navbar-brand " href="#">Memo Rise</a>
+    </div>
+    <div class="container-fluid navbar-right">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="active"><a href="#">About</a></li>
+        <li><a href="#"><span class="active"></span> Logout</a></li>
+        <li class="active"><a href="#"></a></li>
+        <li></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right ">
+      </ul>
     </div>
   </nav>
-  
+
+  <div class="container-fluid">
     <div class="grid-container">
     </div>
-    <div class="current-score">
-      <p></p>
+    <div class = "scoreboard" >
+      <audio id = "audioId">
+        <source src = "audio/countdown.mp3">
+    </audio>
+      <p class="timer-note">Memorize the order of the numbers</p>
+      <p id="timer"></p>
     </div>
-
+  </div>
     <script src="js/work.js"></script>
     <link rel="stylesheet" href="css/game_style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
