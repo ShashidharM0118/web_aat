@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+/* body{
+    background-image: url("../img/brain.jpg");
+} */
+img{
+    height: 110px;
+    width: 450px;
+}
+.logo{
+    height: 110px;
+    width: 1000px;
+}
+.nav{
+    width: 100vw;
+    background: rgb(62,68,79);
+    background: linear-gradient(103deg, rgba(62,68,79,1) 32%, rgba(3,13,61,1) 58%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:25px;
+    position: fixed;
+    z-index: 1;
+}
+#b1,#b2,#b3{
+    height: 60px;
+    width: 130px;
+    transition: all 0.2s 0s linear;
+    position: relative;
+    right: 50px;
+}
+button:hover{
+    transform: scale(1.2);
+}
+p{
+    position: absolute;
+    top: 15px;
+    margin-top: 15px;
+    font-size: 35px;
+    font-weight: 700;
+    right: 1220px;
+    text-align: center;
+    color: rgb(117, 208, 208);
+    line-height: 40px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+#name{
+    position: absolute;
+    top: 0;
+    transition: all 1.2s 0.1s ease-in;
+}
+#name:hover{
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    transform: translateX(340px);
+}
+.main{
+    background-image: url("../img/homebrain.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1500px;
+    width: 100vw;
+    background-attachment: fixed;
+}
+#start-bt{
+    position: relative;
+    /* position: sticky; */
+    top: 450px;
+    left: 16%;
+    width: 150px;
+    height: 80px;
+    background-color: rgb(52, 78, 207);
+    color: aliceblue;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: all 0.2s 0s linear;
+    box-shadow: 3px 3px 6px 5px rgb(160, 241, 233);
+}
+#start-bt:hover{
+    background-color: rgb(61, 197, 195);
+    color: rgb(0, 0, 0);
+    transform: scale(1.2);
+    border-radius: 15px;
+}
+.main #robot{
+    height: 300px;
+    width: 250px;
+    position: relative;
+    top: 150px;
+    opacity: 0.9;
+    border-radius: 6px;
+    animation: 2s 1s ease-in-out running infinite alternate robo;
+}
+@keyframes robo{
+   from{
+    left: 2%;
+   }
+   to{
+    left: 50%;
+   }
+}
+#ball{
+    height: 200px;
+    width: 200px;
+    position: relative;
+    top: 150px;
+    left: 64%;
+    border-radius: 100px;
+    animation: 0.8s 1s ease-in running infinite alternate ball;
+    filter: drop-shadow(15px 15px 100px  rgb(116, 209, 232));
+}
+@keyframes ball{
+    from{
+        top: 130px;
+    }
+    to{
+        top: 390px;
+    }
+} 
