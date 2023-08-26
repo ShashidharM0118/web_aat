@@ -92,7 +92,7 @@ p{
     top: 150px;
     opacity: 0.9;
     border-radius: 6px;
-    animation: 2s 1s ease-in-out running infinite alternate robo;
+    animation: 2s 1s ease-in running infinite alternate robo;
 }
 @keyframes robo{
    from{
@@ -120,3 +120,6 @@ p{
         top: 390px;
     }
 } 
+body{
+    background-color:blueviolet;
+}
