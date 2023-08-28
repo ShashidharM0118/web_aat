@@ -12,7 +12,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li class="active"><a href="#">Home</a></li>
         <li class="active"><a href="#">About</a></li>
-        <li><a href="#"><span class="active"></span> Logout</a></li>
+        <li><a href="#"><span class="active "></span> Logout</a></li>
         <li class="active"><a href="#"></a></li>
         <li></li>
       </ul>
@@ -22,18 +22,21 @@
   </nav>
 
   <div class="container-fluid">
+    <p class="guide">Memorize the order of the numbers</p>
     <div class="grid-container">
     </div>
     <div class = "scoreboard" >
       <audio id = "audioId">
         <source src = "audio/countdown.mp3">
     </audio>
-      <p class="timer-note">Memorize the order of the numbers</p>
+      <p class="timer-note">Countdown</p>
       <p id="timer"></p>
-      <button id = "next-button" class = " btn-lg btn-group-lg"> Next</button>
+      <button id = "next-button" class = " btn-lg btn-group-lg"> Play </button>
+      <!-- <button  data-modal-target="#modal" id = "next-button" class = " btn-lg btn-group-lg"> End Game</button> -->
+     
     </div>
   </div>
-    <script src="js/work.js"></script>
+    <script src="js/game_page.js"></script>
     <link rel="stylesheet" href="css/game_style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
 </body>

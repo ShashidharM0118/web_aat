@@ -11,10 +11,10 @@ body {
     }
     .grid-container {
       display: grid;
-      
       margin-left: 20%;
+      position :absolute;
       margin-top: 5%;
-      margin-right:12%;
+      margin-right:52%;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(4, 1fr);
       gap: 20px;
@@ -22,19 +22,14 @@ body {
     }
     .grid-item {
       width: 60px;
-     height: 60px;
+      height: 60px;
       background-color: #0099ff;
       color: #fdfdfd;
       border-radius: 10px;
       text-align:center;
       padding: 20px;
-      font-size: px;
-      box-shadow: 0 2px 6px rgba(225, 105, 105, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-      -webkit-transition: transform 0.3s, box-shadow 0.3s;
-      -moz-transition: transform 0.3s, box-shadow 0.3s;
-      -ms-transition: transform 0.3s, box-shadow 0.3s;
-      -o-transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 2px 2px 6px rgba(225, 105, 105, 0.1);
+      cursor:pointer;
 }
 
     .grid-item:hover {
@@ -42,26 +37,16 @@ body {
       box-shadow: 0 4px 8px rgba(255, 10, 10, 0.2);
       background-color: rgb(99, 99, 244);
     }
-
-
-    @keyframes shake {
-      0%, 100% {
-        transform: translateX(0);
-      }
-      10%, 30%, 50%, 70%, 90% {
-        transform: translateX(-5px);
-      }
-      20%, 40%, 60%, 80% {
-        transform: translateX(5px);
-      }
+    .guide{
+      position :absolute;
+      margin-left: 23%;
+      margin-top:3%;
+      color:yellow;
+      font-size:20px;
     }
 
-    .shake {
-      animation-name: shake;
-      animation-duration: 0.5s;
-      animation-iteration-count: 1;
-      animation-timing-function: ease-in-out;
-    }
+
+  
 
     #timer {
       font-size: 100px;
@@ -69,6 +54,8 @@ body {
       text-align: center;
     }
     .scoreboard{
+      position :absolute;
+      margin-left: 65%;
       color: rgb(255, 255, 255);
       margin-top: 10%;
       display:inline-block
@@ -79,6 +66,29 @@ body {
     #next-button{
       color: rgb(0, 2, 2);
       transform-origin: 2cm center;
-      
     }
-    
+
+  .grid-shake {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  
+  30%, 50%, 70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(2px, 0, 0);
+}
+}
+
+
+
