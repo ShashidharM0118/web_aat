@@ -12,7 +12,6 @@ for (let i = 0; i < 16; i++) {
 let n = 5;
 let level =1;
 
-while(true){
   const randomNumbersArray = randomNumbersGenerator(16, 16);
 for (let i = 1; i <=n; i++) {
   var number = randomNumbersArray[i];
@@ -78,7 +77,7 @@ gridItems.forEach(item => {
   })
   console.log(currentScore);
 })
-}
+
 
 
 

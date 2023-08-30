@@ -3,38 +3,91 @@
 <head>
   <title>Document</title>
 </head>
-<body>
+<body style="background-color: #0C0404;">
   <nav class="navbar ">
     <div class="navbar-header">
-      <a class="navbar-brand " href="#">Memo Rise</a>
+      <a class="navbar-brand " href="#"> <svg viewBox="0 0 4800 1000">
+        <symbol id="s-text">
+            <text text-anchor="middle" x="600" y="10%">MEMO-RISE</text>
+        </symbol>
+        <g class = "g-ants">
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+        </g>
+    </svg></a>
     </div>
-    <div class="container-fluid navbar-right">
+    <div class="container-fluid navbar-btn ">
       <ul class="nav navbar-nav navbar-right">
+       
         <li class="active"><a href="#">Home</a></li>
-        <li class="active"><a href="#">About</a></li>
-        <li><a href="#"><span class="active"></span> Logout</a></li>
+        <li class="active switch-btn" id = "switch-btn"><a href="#">Game-mode</a></li>
+        <li><a href="#"><span class="active "></span> Logout</a></li>
         <li class="active"><a href="#"></a></li>
         <li></li>
-      </ul>
+      </ul>`
       <ul class="nav navbar-nav navbar-right ">
       </ul>
     </div>
   </nav>
 
   <div class="container-fluid">
+    <p class="guide">Memorize the order of the numbers</p>
     <div class="grid-container">
     </div>
+    
     <div class = "scoreboard" >
       <audio id = "audioId">
         <source src = "audio/countdown.mp3">
     </audio>
-      <p class="timer-note">Memorize the order of the numbers</p>
-      <p id="timer"></p>
-      <button id = "next-button" class = " btn-lg btn-group-lg"> Next</button>
-    </div>
+      <p class="timer-note">Countdown</p>
+      <p id="timer">0</p>
+   
+      
+      <button  data-modal-target="#modal" onClick="window.location.reload();" id = "next-button" class = " btn-lg btn-group-lg restart"> New Game</button>
+     
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3 class = "pop-title">Meaning of Hello!</h3>
+      
   </div>
-    <script src="js/work.js"></script>
+
+  <div class="modal-body">
+      <p>Your Score : <span class = "score">0</span></p>
+      <p> Time taken : <span class = "time-taken">0</span></p>
+      <p> Accuracy : <span class = "accuracy">0</span></p>
+     <button  data-modal-target="#modal" id = "next-button"  onClick="window.location.reload();" class = " btn-lg btn-group-lg restart"> Restart</button>
+     <button  data-modal-target="#modal" id = "close-btn" class = " btn-lg btn-group-lg close-btn"> CLOSE </button>
+  </div>
+  </div>
+
+</div>
+
+    
+    <!-- <script src="js/game_page.js"></script> -->
     <link rel="stylesheet" href="css/game_style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
+
+    <script>
+     
+     
+          
+          var scriptElement = document.createElement('script');
+          scriptElement.src = 'js/game_page.js'; 
+          document.body.appendChild(scriptElement);
+
+        // var scriptElement = document.createElement('script');
+        //   scriptElement.src = 'js/game_page(3X3).js'; 
+        //   document.body.appendChild(scriptElement);
+    
+  </script>
+
 </body>
 </html>
