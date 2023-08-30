@@ -7,7 +7,7 @@ function validate(){
 
     if( name=="" || email=="" || password==""){
         document.getElementById("pass1").innerHTML = "Please  refresh and fill all the details ";
-        bool = false;
+        
         return false;    
     }else{
         return true;
@@ -21,7 +21,7 @@ function s_validate(){
 
     if( name=="" || email=="" || password==""){
         document.getElementById("pass2").innerHTML = "Please  refresh and fill all the details ";
-        bool = false;
+       
         return false;    
     }else{
         return true;
@@ -39,17 +39,17 @@ function pass_validate(){
         
     }
 }
-let data
-let user = []
 
+let user =[["","",""]];
+ var users=0;
 function check(){
     
     let name = document.myform.name.value ;
     let email = document.myform.email.value ;
     let password = document.myform.password.value ;
     let i;
-    for(i=0; i<5; i++){
-        if(name==user[i]&& email==user[i] && password==user[i]){
+    for(i=0; i<users; i++){
+        if(name==user[i][0]&& email==user[i][1] && password==user[i][2]){
             return true;
         }
     }
@@ -57,4 +57,13 @@ function check(){
     return false;
 }
 
+function store(){
+    let name = document.sform.name.value ;
+    let email = document.sform.email.value ;
+    let password = document.sform.password.value ;
+    let list = [name,email,password];
+    user.push(list);
+    users++;
+}
+console.log(user);
 
