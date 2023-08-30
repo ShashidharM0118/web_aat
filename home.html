@@ -6,6 +6,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+
+    body {
+      font-family: "Lato", sans-serif;
+      transition: background-color 0.3s;
+    }
+    .sidenav {
+    height: 27%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: #051e44;
+    filter: drop-shadow(2px 3px 5px rgb(5, 23, 36));
+    box-shadow: 2px 3px 5px rgb(32, 186, 213);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 10px;
+    border-bottom-right-radius: 100px;
+  }
+  
+  .sidenav a {
+    padding-left:20px ;
+    padding-top: 0px;
+    margin-top: 0px;
+    width: 150px;
+    height: 45px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #1c92ad;
+    border-top-right-radius: 20px;
+    display: block;
+    transition: 0.3s;
+    border: 2px solid rgb(32, 202, 168);
+  }
+  
+  .sidenav a:hover {
+    font-size: 27px; 
+    background-color: #3cb1c0;
+    color: #0d0b40;
+  }
+  .sidenav .closebtn {
+    width: 3px;
+    position: relative;
+    top: 10px;
+    height: 50px;
+    right:-1450px;
+    text-align: center;
+    font-size: 30px;
+    padding: -10px;
+    border-radius: 50px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    margin-left: 0px;
+  }
+  .sidenav .closebtn:hover{
+    color: #0c2227;
+    background-color: #5c9fc5;
+  }
+  #sidebar {
+    position: relative;
+    left: -30px;
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  #sidebar span{
+    color: #3298dc;
+    font-size: 20px;
+  }
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  #login{
+    margin-top: -10px;
+  }
+  #signup{
+    margin-top: 20px;
+  }
+  #sidebar span:hover{
+    color: #d2ecfb;
+  }
+  </style>
   <!-- <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/bootstrap.min.css"> -->
   <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
@@ -18,23 +103,48 @@
 
   <div class="nav">
     <div class="logo">
-      <p>Check Your Memory power</p>
+      <p id="para">Check Your Memory power</p>
       <img src="img/logo.jpg" id="name" alt="">
     </div>
-    <button type="button" id="b1" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-      data-bs-whatever="@mdo">Start Game</button>
-    <button type="button" id="b2" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+    <button type="button" id="b1" class="btn btn-primary">Start Game</button>
+
+    <!-- <button type="button" id="b2" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
       data-bs-whatever="@fat">Sign UP</button>
-    <button   type="button" id="b3" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-      data-bs-whatever="@getbootstrap">L<a href="login.html">Login</a></button>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <button type="button" id="b3" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+      data-bs-whatever="@getbootstrap">Log IN</button> -->
+      
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" id="closeb" onclick="closeNav()">&times;</a>
+        <a href="login.html" id="login">LOG-IN</a>
+        <a href="signup.html" id="signup">SIGN-UP</a>
+        <!-- <a href="#">Clients</a>
+        <a href="#">Contact</a> -->
+      </div>
+      <div id="sidebar">
+        <span style="font-size:30px;cursor:pointer" id="regbtn" onclick="openNav()">  &#9776; Register</span>
+      </div>
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "1550px";
+          document.getElementById("sidebar").style.marginLeft = "250px";
+          document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("sidebar").style.marginLeft= "0";
+          document.body.style.backgroundColor = "white";
+        }
+        </script>
+
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div> 
-           <div class="modal-body">
+          </div>
+          <div class="modal-body">
             <form>
               <div class="mb-3">
                 <label for="recipient-name" class="col-form-label">Recipient:</label>
@@ -52,13 +162,36 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
   <div class="main">
-    <img src="img/robo.webp" id="robot" alt="">
-    <img id="ball" src="img/brainball.jpg" alt="">
+    <!-- <img src="img/robo.webp" id="robot" alt=""> -->
+    <p id="ready">Are you ready?</p>
+    <img id="ball" src="img/brainball.jpg" alt="">                <!--create as "RU ready when u hover on ball" -->
     <button id="start-bt">Get Started</button>
+    <h2>CREATORS</h2>
+    <div class="creators">
+      <div class="sm">
+        <h3>SHASHIDHAR BM</h1>
+        <a href=""><i class="fa-brands fa-instagram"></i> insta</a>
+        <a href=""> <i class="fa-brands fa-linkedin"></i> linkdein</a>
+        <a href=""><i class="fa-brands fa-square-github"></i> github</a>
+      </div>
+      <div class="sp">
+        <h3>SHIVARAJ KP</h1>
+        <a href="https://www.instagram.com/shivu_sp_33/?hl=en" target="_blank"> <i class="fa-brands fa-instagram"></i> insta</a>
+        <a href="https://in.linkedin.com/in/shivraj-kp-9920bb255" target="_blank"> <i class="fa-brands fa-linkedin"></i> linkdein</a>
+        <a href="https://github.com/Shivupujari2003" target="_blank"><i class="fa-brands fa-square-github"></i> github</a>
+      </div>
+      <div class="sb">
+        <h3>SAGAR B</h1>
+        <a href=""><i class="fa-brands fa-instagram"></i> insta</a>
+        <a href=""> <i class="fa-brands fa-linkedin"></i> linkdein</a>
+        <a href=""><i class="fa-brands fa-square-github"></i> github</a>
+      </div>
+    </div>
   </div>
+  <p id="copy">&copy.2023 MEMORISE All Rights Reserved.</p>
 </body>
 
 </html>
