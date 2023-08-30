@@ -15,11 +15,11 @@
 
 
 const gridContainer = document.querySelector('.grid-container');
-gridContainer.classList.add("four-v");
+gridContainer.classList.add("three-v");
 const wrongNumberSet = new Set();
 
  // Organize the grid with the numbers
- const randomNumbersArray = randomNumbersGenerator(16,16);
+ const randomNumbersArray = randomNumbersGenerator(9,9);
  randomNumbersArray.forEach(number => {
    const gridItem = document.createElement('div');
    gridItem.className = 'grid-item';
@@ -50,7 +50,7 @@ const wrongNumberSet = new Set();
   var timer =  document.getElementById("timer");
  
   var audio = document.getElementById("audioId");
-  var count = 16;
+  var count = 8;
   setInterval(() => {
     if (count >= 0) {
       timer.innerHTML = count;
@@ -111,9 +111,9 @@ const wrongNumberSet = new Set();
       }
       playerGuide.innerHTML = "The correct number to choose : "+tracker;
      
-      if(tracker >= 17){
+      if(tracker >= 10){
         playerGuide.innerHTML = "Game over";
-        if(currentScore > 80){
+        if(currentScore >=90){
           ptitle.innerHTML = "Great Job!";
           pscore.innerHTML = currentScore;
           ptime.innerHTML = " seconds";
@@ -126,26 +126,19 @@ const wrongNumberSet = new Set();
         }
         modal.style.display = "block";
       }
-      if(tracker == 17 && currentScore == 160){
+      if(tracker == 10 && currentScore == 90){
         playerGuide.innerHTML = "Brilliant";
-        if(currentScore > 80){
+      
           ptitle.innerHTML = "Brilliant!";
           pscore.innerHTML = currentScore;
           ptime.innerHTML = " seconds";
           paccuracy.innerHTML = " 100%";
-        }else{
-          ptitle.innerHTML = "Well tried!";
-          pscore.innerHTML = currentScore;
-          ptime.innerHTML = " seconds";
-          paccuracy.innerHTML = " 100%";
-        }
         modal.style.display = "block";
       }
     })
   })
-} ,17000)
+} ,9000)
 
-//function to update tracker value
 function wrongTracker (itemNumberTracker) {
   if(!wrongNumberSet.has(itemNumberTracker+1)){
       return itemNumberTracker+1;
@@ -156,22 +149,19 @@ function wrongTracker (itemNumberTracker) {
 
 
 var modal = document.getElementById("myModal");
-
 var span = document.getElementsByClassName("close-btn")[0];
 
 span.onclick = function() {
   modal.style.display = "none";
 }
 
-
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
 }
-
-
 var ptitle = document.querySelector(".pop-title");
 var pscore = document.querySelector(".score");
 var ptime = document.querySelector(".time-taken");
 var paccuracy = document.querySelector(".accuracy");
+var restart = document.querySelector(".restart");
