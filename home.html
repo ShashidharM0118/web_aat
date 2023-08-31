@@ -21,11 +21,11 @@
       <p>Check Your Memory power</p>
       <img src="img/logo.jpg" id="name" alt="">
     </div>
-    <button type="button" id="b1" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+    <button onclick="f1()" type="button" id="b1" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
       data-bs-whatever="@mdo">Start Game</button>
-    <button type="button" id="b2" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+    <button onclick="f2()" type="button" id="b2" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
       data-bs-whatever="@fat">Sign UP</button>
-    <button   type="button" id="b3" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+    <button  onclick="f3()"  type="button" id="b3" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
       data-bs-whatever="@getbootstrap">L<a href="login.html">Login</a></button>
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -59,6 +59,17 @@
     <img id="ball" src="img/brainball.jpg" alt="">
     <button id="start-bt">Get Started</button>
   </div>
+  <script>
+    function f1(){
+           window.location.href="game_page.html":
+    }
+    function f2(){
+          window.location.href="signup.html":
+    }
+    function f3(){
+           window.location.href="login.html":
+    }
+  </script>
 </body>
 
 </html>
