@@ -18,3 +18,13 @@ function wrongTracker (itemNumberTracker) {
     return wrongTracker(itemNumberTracker+1);
 }
 
+// var color = 0;
+// setInterval(() => {
+// if(color <=100000){
+// var body = document.querySelector("body");
+// var colorOne = "rgb(" + Math.floor(Math.random()*255) + "," + Math.floor(Math.random()*255)  + "," + Math.floor(Math.random()*255) + ")";
+// var colorTwo = "rgb(" + Math.floor(Math.random()*255) + "," + Math.floor(Math.random()*255)  + "," + Math.floor(Math.random()*255) + ")";
+// body.style.background = 'linear-gradient(to right ,'+colorOne+','+ colorTwo+')';
+// color++;
+// }
+// }, 500);
