@@ -31,7 +31,7 @@ var timerNote = document.querySelector(".timer-note");
 const gridItems = document.querySelectorAll('.grid-item');
 var timer = document.getElementById("timer");
 var audio = document.getElementById("audioId");
-var count = 18;
+var count = 17;
 setInterval(() => {
 	if (count >= 0) {
 		timer.innerHTML = count;
@@ -107,7 +107,7 @@ setTimeout(() => {
 			}
 		})
 	})
-}, 19000)
+}, 18000)
 
 //function to update tracker value
 function wrongTracker(itemNumberTracker) {
@@ -119,13 +119,13 @@ function wrongTracker(itemNumberTracker) {
 
 function popUpfunction(currentScore) {
 	var endTime = performance.now()
-	ptitle.innerHTML = currentScore > -100 ? "Great Job! 🎊" : "Better luck next time😊";
+	ptitle.innerHTML = currentScore > 70 ? "Great Job! 🎊" : "Better luck next time😊";
 	pscore.innerHTML = currentScore;
 	ptime.innerHTML = `${(endTime - startTime)/1000} seconds`;
 	paccuracy.innerHTML = accuracy + " %";
 	modal.style.display = "block";
 	gameMusic.pause();
-	currentScore > 70 ? gameWin.play() : gameFail.play();
+	currentScore >70  ? gameWin.play() : gameFail.play();
 }
 
 var endBtn = document.getElementById("end-button");
@@ -143,7 +143,6 @@ window.onclick = function(event) {
 		modal.style.display = "none";
 	}
 }
-
 var correctChoice = document.getElementById("correct");
 var wrongChoice = document.getElementById("wrong");
 var gameMusic = document.getElementById("game-music");

@@ -85,54 +85,17 @@
       <p>Your Score : <span class = "score">0</span></p>
       <p> Time taken : <span class = "time-taken">0</span></p>
       <p> Accuracy : <span class = "accuracy">0</span></p>
-     <button data-modal-target="#modal" id = "next-button"  onClick="window.location.reload();" class = " btn-lg btn-group-lg restart"> Restart</button>
-     <button data-modal-target="#modal" id = "close-btn" class = " btn-lg btn-group-lg close-btn"> <span class="btn-content">Close</span> </button>
+     <button data-modal-target="#modal" id = "next-button"  onClick="window.location.reload();" class = "btn-lg btn-group-lg btn-restart"> <span class="btn-content">Restart</span></button>
+     <button data-modal-target="#modal" id = "close-btn" class = "btn-lg btn-group-lg close-btn"> <span class="btn-content">Close</span> </button>
   </div>
   </div>
 </div>
-
     <link rel="stylesheet" href="css/game_style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-
     <script>
-      gameMode = document.getElementById("game-mode");
-      console.log(gameMode.value);
-
       let currentScript = document.createElement('script');
-          currentScript.src = 'js/game_page.js'; 
+          currentScript.src = 'js/game_page.js';
           document.body.appendChild(currentScript);
-
-function loadScript(scriptSrc) {
-  if (currentScript) {
-    // Remove the current script if one exists
-    document.body.removeChild(currentScript);
-  }
-
-  const scriptElement = document.createElement('script');
-  scriptElement.src = scriptSrc;
-
-  // Listen to the 'load' event of the script
-  scriptElement.onload = function () {
-    currentScript = scriptElement;
-  };
-
-  document.body.appendChild(scriptElement);
-}
-      gameMode.addEventListener('change', function() {
-            const value = gameMode.value;
-            switch (value) {
-                case 'easy':
-                   loadScript('js/game_page(3X3).js');
-                  break;
-
-                  case 'difficult':
-                     loadScript('js/game_page.js');
-                    break;
-            }
-        });
-   
-
   </script>
-
 </body>
 </html>

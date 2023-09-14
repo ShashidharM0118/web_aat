@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Monoton);
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 @import url(https://fonts.googleapis.com/css?family=Rubik\ Dirt);
-@import url(https://fonts.googleapis.com/css?family=Creepster);
+@import url(https://fonts.googleapis.com/css?family=Orbitron);
 @import url(https://fonts.googleapis.com/css?family=Tilt\ Neon);
 @import url(https://fonts.googleapis.com/css?family=Frijole);
 
@@ -10,7 +10,7 @@ a{
   font: bold 1em "Tilt Neon";
 }
 .navbar{
-  background-color: rgb(0, 112, 47);
+  background-color: rgb(69, 69, 69);
   box-shadow: 0 0 10px rgb(85, 41, 41);
   z-index: 2;
 }
@@ -19,7 +19,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  background: linear-gradient(to right,red,orange);
+  background: linear-gradient(to right,yellow,red);
   }
 .container-fluid{
   display:flex;
@@ -41,16 +41,14 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
 }
-.restart{
-  margin-top: 90%;
-}
+
 .grid-item {
   border-color: #fdfdfd;
   width: 60px;
   height: 60px;
   font-size: large;
-  background-color: #0099ff;
-  color: #fdfdfd;
+  background-color: #00277a;
+  color: #ffffff;
   border-radius: 10px;
   text-align:center;
   padding: 20px;
@@ -89,15 +87,12 @@ body {
   position: relative;
   margin-top: 10%;
   text-align: center;
-  font:1em "Creepster";
+  font:1em "Orbitron";
+  font-weight:900;
+  letter-spacing: 0.1em ;
   font-size: 30px;
 }
-#next-button{
-  position: relative;
-  margin-top: 30%;
-  color: rgb(0, 0, 0);
-  transform-origin: 2cm center;
-}
+
 #end-button{
   position: relative;
   margin-top: 30%;
@@ -105,22 +100,24 @@ body {
 }
 button{
   border-radius: 10px;
-  background:#039fbe;
+  background:#00277a;
   border: solid 1px white;
   font-size:1.2em;
   padding:10px 10px;
   text-align: center;
   width:170px;
   margin: 10px;
+  border-radius: 10px;
+ 
   &:hover{
-  background-color:rgb(132, 0, 255);
-  border: solid 1px rgb(200, 255, 0);
-  border-radius: 20px;
-  color:rgb(0, 0, 0);
-  }
+    background-color:rgb(132, 0, 255);
+    border: solid 1px rgb(200, 255, 0);
+    color:rgb(0, 0, 0);
+    }
 }
 .btn-content{
   font: bold 1em "Tilt Neon";
+  color:white;
 }
 
 /* code-pen */
@@ -169,19 +166,19 @@ svg {
     -webkit-animation: stroke-offset 5s infinite linear;
 }
 .text-copy:nth-child(1){
-	stroke: #4a021a;
+	stroke: #ff0055;
 	animation-delay: -1s;
 }
 .text-copy:nth-child(2){
-	stroke: #034749;
+	stroke: rgb(242, 255, 0);
 	animation-delay: -2s;
 }
 .text-copy:nth-child(3){
-	stroke: #0003b5;
+	stroke: #ff0000;
 	animation-delay: -3s;
 }
 .text-copy:nth-child(4){
-	stroke: #0c5a00;
+	stroke: #eaf605;
 	animation-delay: -4s;
 }
 .text-copy:nth-child(5){
@@ -247,7 +244,6 @@ svg {
 }
 /* The Close Button */
 .close-btn {
-  color: #000000;
   display:block;
   float: right;
   border-color: yellowgreen;
@@ -255,6 +251,16 @@ svg {
   font-size: 28px;
   margin-top: 4%;
 }
+.btn-restart{
+  display:block;
+  float: left;
+  border-color: yellowgreen;
+  text-align: center;
+  font-size: 28px;
+  margin-top: 4%;
+}
+
+
 .close:hover,
 .close:focus {
   color: black;
