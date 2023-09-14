@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <title>Document</title>
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body >
+  
   <div>
     <audio id = "game-music">
       <source src = "audio/game-music.mp3">
@@ -28,14 +30,12 @@
     </svg></a>
     <!-- ------- -->
     </div>
-    <div class="container-fluid navbar-btn ">
+    <div class=" navbar-btn " style="margin-right: 2%;">
       <ul class="nav navbar-nav navbar-right">
-       
-        <li class="active"><a href="#">Home</a></li>
-        <li class="active switch-btn" id = "switch-btn"><a href="#">Game-mode</a></li>
-        <li><a href="#"><span class="active "></span> Logout</a></li>
-        <li class="active"><a href="#"></a></li>
-        <li></li>
+        <li class="active " ><a href="#" >Home</a></li>
+        <li class="active switch-btn" id = "switch-btn" ><a href="#">Game-mode</a></li>
+        <li class="active "  ><a href="#">logout </a></li>
+      
       </ul>`
       <ul class="nav navbar-nav navbar-right ">
       </ul>
@@ -61,40 +61,37 @@
       <p id="timer">0</p>
    
       
-      <button  data-modal-target="#modal" onClick="window.location.reload();" id = "next-button" class = "btn-design"> New Game</button>
-      <button  data-modal-target="#modal" onClick="endGame();" id = "end-button" class = "btn-design"> End game</button>
+      <button  data-modal-target="#modal" onClick="window.location.reload();" id = "next-button" class = "btn-design"> <span class="btn-content">New Game</span></button>
+      <button  data-modal-target="#modal" onClick="endGame();" id = "end-button" class = "btn-design"> <span class = "btn-content">End game</span></button>
      
 
 <!-- popup -->
 <div id="myModal" class="modal">
-
   <!-- Modal content -->
   <div class="modal-content">
+    <audio id = "game-win">
+      <source src = "audio/game_overp.wav">
+    </audio>
+    <audio id = "game-fail">
+      <source src = "audio/game-fail-sound-effect.mp3">
+    </audio>
     <div class="modal-header">
       <h3 class = "pop-title">Meaning of Hello!</h3>
-      
   </div>
-
-  <div class="modal-body">
+  <div class="modal-body" style="background-color: aqua;">
       <p>Your Score : <span class = "score">0</span></p>
       <p> Time taken : <span class = "time-taken">0</span></p>
       <p> Accuracy : <span class = "accuracy">0</span></p>
      <button  data-modal-target="#modal" id = "next-button"  onClick="window.location.reload();" class = " btn-lg btn-group-lg restart"> Restart</button>
-     <button  data-modal-target="#modal" id = "close-btn" class = " btn-lg btn-group-lg close-btn"> CLOSE </button>
+     <button  data-modal-target="#modal" id = "close-btn" class = " btn-lg btn-group-lg close-btn"> <span class="btn-content">Close</span> </button>
   </div>
   </div>
-
 </div>
 
-    
-    <!-- <script src="js/game_page.js"></script> -->
     <link rel="stylesheet" href="css/game_style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
 
     <script>
-     
-     
-          
           var scriptElement = document.createElement('script');
           scriptElement.src = 'js/game_page.js'; 
           document.body.appendChild(scriptElement);
