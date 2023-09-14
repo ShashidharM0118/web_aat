@@ -1,97 +1,133 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Saira\ Stencil\ One);
+@import url(https://fonts.googleapis.com/css?family=Monoton);
+@import url(https://fonts.googleapis.com/css?family=Rubik\ Dirt);
+@import url(https://fonts.googleapis.com/css?family=Creepster);
+@import url(https://fonts.googleapis.com/css?family=Tilt\ Neon);
+@import url(https://fonts.googleapis.com/css?family=Frijole);
 
+a{
+  font: bold 1em "Tilt Neon";
+}
+.navbar{
+  background-color: rgb(250, 126, 60);
+  box-shadow: 0 0 10px rgb(85, 41, 41);
+  z-index: 2;
+}
 body {
-      font-family: Arial, sans-serif;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-      /* background: linear-gradient(to right,rgba(255, 10, 10, 0.892),25%,orange,rgba(255, 10, 10, 0.892)); */
-      background-color: black;
-      /* background-blend-mode:multiply; */
-      }
-
-    .container-fluid{
-      display:flex;
-      
-    }
-
-    .grid-container {
-      display: grid;
-      margin-left: 20%;
-      position :absolute;
-      margin-top: 5%;
-      margin-right:52%;
-      gap: 20px;
-      padding: 40px;
-    }
-    .three-v{
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-    }
-    .four-v{
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(4, 1fr);
-    }
-    .restart{
-      margin-top: 90%;
-      
-    }
-    
-    .grid-item {
-      width: 60px;
-      height: 60px;
-      background-color: #0099ff;
-      color: #fdfdfd;
-      border-radius: 10px;
-      text-align:center;
-      padding: 20px;
-      box-shadow: 2px 2px 6px rgba(225, 105, 105, 0.1);
-      cursor:pointer;
-      }
-
-    .grid-item:hover {
-      transform: scale(1.06);
-      box-shadow: 0 4px 8px rgba(255, 10, 10, 0.2);
-      background-color: rgb(99, 99, 244);
-    }
-    .guide{
-      position :absolute;
-      margin-left: 23%;
-      margin-top:3%;
-      color:rgb(237, 255, 243);
-      font-size:20px;
-    }
-
-    
-
-  
-
-    #timer {
-      font-size: 100px;
-      /* color: rgb(255, 248, 229); */
-      text-align: center;
-    }
-    .scoreboard{
-      position :absolute;
-      margin-left: 65%;
-      color: rgb(255, 255, 255);
-      margin-top: 5%;
-      display:inline-block
-    }
-    .timer-note{
-      font-size: 30px;
-    }
-    #next-button{
-      color: rgb(0, 2, 2);
-      transform-origin: 2cm center;
-    }
-
-  .grid-shake {
-  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-  transform: translate3d(0, 0, 0);
-  perspective: 1000px;
+  font-family: Arial, sans-serif;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background: linear-gradient(to right,rgb(149, 255, 0),rgb(6, 152, 1));
+  }
+.container-fluid{
+  display:flex;
+}
+.grid-container {
+  display: grid;
+  margin-left: 20%;
+  position :absolute;
+  margin-top: 5%;
+  margin-right:52%;
+  gap: 20px;
+  padding: 40px;
+}
+.three-v{
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.four-v{
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.restart{
+  margin-top: 90%;
+}
+.grid-item {
+  width: 60px;
+  height: 60px;
+  font-size: large;
+  background-color: #0099ff;
+  color: #fdfdfd;
+  border-radius: 10px;
+  text-align:center;
+  padding: 20px;
+  box-shadow: 2px 2px 6px rgba(225, 105, 105, 0.1);
+  cursor:pointer;
+}
+.grid-item:hover {
+  transform: scale(1.06);
+  box-shadow: 0 4px 8px rgba(255, 10, 10, 0.2);
+  background-color: rgb(99, 99, 244);
+}
+.guide{
+  font:1em "Tilt Neon";
+  font-weight: bold;
+  position :absolute;
+  margin-left: 23%;
+  margin-top:3%;
+  color:rgb(237, 255, 243);
+  font-size:20px;
+}
+#timer {
+  position: relative;
+  margin-top: 10%;
+  font: 1em "Rubik Dirt";
+  font-size: 100px;
+  text-align: center;
+}
+.scoreboard{
+  position :relative;
+  margin-left: 68%;
+  color: rgb(255, 255, 255);
+  margin-top: 3%;
+  display:inline-block
+}
+.timer-note{
+  position: relative;
+  margin-top: 10%;
+  text-align: center;
+  font:1em "Creepster";
+  font-size: 30px;
+}
+#next-button{
+  position: relative;
+  margin-top: 30%;
+  color: rgb(0, 0, 0);
+  transform-origin: 2cm center;
+}
+#end-button{
+  position: relative;
+  margin-top: 30%;
+  display:none;
+}
+button{
+  border-radius: 10px;
+  background:#039fbe;
+  border: solid 1px white;
+  font-size:1.2em;
+  padding:10px 10px;
+  text-align: center;
+  width:170px;
+  margin: 10px;
+  &:hover{
+  background-color:rgb(132, 0, 255);
+  border: solid 1px rgb(200, 255, 0);
+  border-radius: 20px;
+  color:rgb(0, 0, 0);
+  }
+}
+.btn-content{
+  font: bold 1em "Tilt Neon";
 }
 
+/* code-pen */
+.grid-shake {
+  animation: shake 0.90s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
+  -webkit-animation: shake 0.90s cubic-bezier(.36,.07,.19,.97) both;
+}
 @keyframes shake {
   10%, 90% {
     transform: translate3d(-1px, 0, 0);
@@ -99,7 +135,6 @@ body {
   20%, 80% {
     transform: translate3d(2px, 0, 0);
   }
-  
   30%, 50%, 70% {
     transform: translate3d(-2px, 0, 0);
   }
@@ -107,112 +142,117 @@ body {
     transform: translate3d(2px, 0, 0);
 }
 }
+.active{
+  text-size-adjust: 1em;
+}
 
-
-
-
-
-
+/* memo-rise (from-github repo -css styles)*/
 svg {
- 
     display: inline-block;
     position:relative;
     top: 2%;
     bottom:2%;
-    font: 8em 'Montserrat';
+    font: 8em 'Frijole';
+    font-weight:bolder;
     width: 100%;
     height: 200px;
 }
-
 .text-copy {
     fill: none;
     stroke: white;
-    stroke-dasharray: 6% 29%;
-    stroke-width: 5px;
+    stroke-dasharray: 8% 29%;
+    stroke-width: 8px;
     stroke-dashoffset: 0%;
-    animation: stroke-offset 5.5s infinite linear;
+    animation: stroke-offset 5s infinite linear;
+    -webkit-animation: stroke-offset 5s infinite linear;
 }
-
 .text-copy:nth-child(1){
-	stroke: #4D163D;
-	animation-delay: -1;
+	stroke: #4a021a;
+	animation-delay: -1s;
 }
-
 .text-copy:nth-child(2){
-	stroke: #cf1578;
+	stroke: #034749;
 	animation-delay: -2s;
 }
-
 .text-copy:nth-child(3){
-	stroke: #e8d21d;
+	stroke: #0003b5;
 	animation-delay: -3s;
 }
-
 .text-copy:nth-child(4){
-	stroke: #039fbe;
+	stroke: #0c5a00;
 	animation-delay: -4s;
 }
-
 .text-copy:nth-child(5){
-	stroke: #b20238;
+	stroke: #000000;
 	animation-delay: -5s;
 }
-
 @keyframes stroke-offset{
 	100% {stroke-dashoffset: -35%;}
 }
 
-
+/* popup */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
 }
-
 /* Modal Content/Box */
 .modal-content {
   background-color: #000000;
   color:#000000;
-  margin: 10% auto; /* 15% from the top and centered */
+  margin: 10% auto;
   padding: 20px;
-  border: 1px solid #ffffff;
-  width: 50%; /* Could be more or less, depending on screen size */
+  border: 1px solid #000000;
+  width: 50%;
+  height: 50%;
 }
-
-
-
 .modal-header {
     display: flex;
+    font: 1em 'Rubik Dirt';
+    word-spacing: 0.15em;
     justify-content: space-between;
     margin-bottom: 16px;
     color: #ffffff;
-    
     background-color: #000000;
-    font-size: 30px;
+    font-size: 50px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
 }
-
-.modal-body p { 
-   font-size: 22px;
-  line-height: 1.5; 
+.modal-body p {
+  text-align: justify;
+  font: 8em 'Saira Stencil One';
+  margin-right: 10%;
+  margin-left: 10%;
+  font-size: 22px;
+  line-height: 1.5;
+  background-color: #abff9e;
 }
-
+.modal-body{
+  margin-right: 5%;
+  margin-left: 5%;
+  width: 90%;
+  height: 50%;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
 /* The Close Button */
 .close-btn {
-  color: #ff0000;
-  display:flex;
+  color: #000000;
+  display:block;
   float: right;
-  
+  border-color: yellowgreen;
+  text-align: center;
   font-size: 28px;
-  font-weight: bold;
+  margin-top: 1%;
 }
-
 .close:hover,
 .close:focus {
   color: black;
@@ -221,4 +261,5 @@ svg {
 }
 
 
-/* dropdown */
+
+
