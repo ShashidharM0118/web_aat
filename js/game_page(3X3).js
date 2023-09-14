@@ -100,7 +100,7 @@ setTimeout(() => {
 			}
 			playerGuide.innerHTML = "The correct number to choose : " + tracker;
 			accuracy = (rightclicks / clicks) * 100;
-			if (tracker >= 17) {
+			if (tracker >= 10) {
 				playerGuide.innerHTML = "Game over";
 					popUpfunction(currentScore)
 			}
@@ -117,13 +117,13 @@ function wrongTracker(itemNumberTracker) {
 }
 
 function popUpfunction(currentScore) {
-	ptitle.innerHTML = currentScore > -100 ? "Great Job! 🎊" : "Better luck next time😊";
+	ptitle.innerHTML = currentScore > 50 ? "Great Job! 🎊" : "Better luck next time😊";
 	pscore.innerHTML = currentScore;
 	ptime.innerHTML = " seconds";
 	paccuracy.innerHTML = accuracy + " %";
 	modal.style.display = "block";
 	gameMusic.pause();
-	currentScore > 70 ? gameWin.play() : gameFail.play();
+	currentScore > 50 ? gameWin.play() : gameFail.play();
 }
 
 var endBtn = document.getElementById("end-button");

@@ -46,12 +46,13 @@ setInterval(() => {
 		});
 	}
 }, 1000);
-
+var startTime = 0;
 let currentScore = 0;
 var clicks = 0.0;
 var accuracy = 0.0;
 //working after 16 seconds
 setTimeout(() => {
+	startTime = performance.now();
 	gameMusic.play();
 	gridItems.forEach(item => {
 		item.style.fontSize = '0px';
@@ -117,9 +118,10 @@ function wrongTracker(itemNumberTracker) {
 }
 
 function popUpfunction(currentScore) {
+	var endTime = performance.now()
 	ptitle.innerHTML = currentScore > -100 ? "Great Job! 🎊" : "Better luck next time😊";
 	pscore.innerHTML = currentScore;
-	ptime.innerHTML = " seconds";
+	ptime.innerHTML = `${(endTime - startTime)/1000} seconds`;
 	paccuracy.innerHTML = accuracy + " %";
 	modal.style.display = "block";
 	gameMusic.pause();
