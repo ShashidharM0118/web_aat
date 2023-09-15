@@ -41,7 +41,6 @@ setInterval(() => {
 		count--;
 		gridItems.forEach(item => {
 			item.addEventListener("click", () => {
-				item.classList.toggle("grid-shake")
 			})
 		});
 	}
@@ -57,9 +56,6 @@ setTimeout(() => {
 	gridItems.forEach(item => {
 		item.style.fontSize = '0px';
 		endBtn.style.display = "inline"
-		item.addEventListener("click", () => {
-			item.classList.toggle("grid-shake")
-		})
 	});
 	//On click logic
 	let tracker = 1;
@@ -132,11 +128,15 @@ var endBtn = document.getElementById("end-button");
 endBtn.addEventListener("click", () => {
 	popUpfunction(currentScore);
 });
+endBtn.addEventListener("keyup", (event) => {
+	if(event.shiftKey){
+	popUpfunction(currentScore);
+	}
+})
 var modal = document.getElementById("myModal");
 var span = document.getElementsByClassName("close-btn")[0];
 span.onclick = function() {
 	modal.style.display = "none";
-	document.location.reload();
 }
 window.onclick = function(event) {
 	if (event.target == modal) {

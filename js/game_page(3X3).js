@@ -41,24 +41,21 @@ setInterval(() => {
 		count--;
 		gridItems.forEach(item => {
 			item.addEventListener("click", () => {
-				item.classList.toggle("grid-shake")
 			})
 		});
 	}
 }, 1000);
-
+var startTime = 0;
 let currentScore = 0;
 var clicks = 0.0;
 var accuracy = 0.0;
 //working after 16 seconds
 setTimeout(() => {
+	startTime = performance.now();
 	gameMusic.play();
 	gridItems.forEach(item => {
 		item.style.fontSize = '0px';
 		endBtn.style.display = "inline"
-		item.addEventListener("click", () => {
-			item.classList.toggle("grid-shake")
-		})
 	});
 	//On click logic
 	let tracker = 1;
@@ -117,9 +114,10 @@ function wrongTracker(itemNumberTracker) {
 }
 
 function popUpfunction(currentScore) {
+	var endTime = performance.now()
 	ptitle.innerHTML = currentScore > 50 ? "Great Job! 🎊" : "Better luck next time😊";
 	pscore.innerHTML = currentScore;
-	ptime.innerHTML = " seconds";
+	ptime.innerHTML = `${(endTime - startTime)/1000} seconds`;
 	paccuracy.innerHTML = accuracy + " %";
 	modal.style.display = "block";
 	gameMusic.pause();
@@ -134,7 +132,6 @@ var modal = document.getElementById("myModal");
 var span = document.getElementsByClassName("close-btn")[0];
 span.onclick = function() {
 	modal.style.display = "none";
-	document.location.reload();
 }
 window.onclick = function(event) {
 	if (event.target == modal) {

@@ -44,7 +44,7 @@
 </head>
 <body >
    
-    <form align="center" action="login.html" name="sform" >
+    <form align="center" action="login.html" onsubmit=" return store()"  name="sform" >
         <br><br><br><br>
         <h1>Register</h1><br>
         <div class="form-floating">
@@ -82,7 +82,7 @@
         </div>
       
         <!-- Submit button -->
-        <button type="submit"  onclick="return (pass_validate() && s_validate() && check())"   class="btn btn-primary btn-block mb-4">Register</button>
+        <button type="submit"  onclick="return (pass_validate() && s_validate() &&store())"   class="btn btn-primary btn-block mb-4">Register</button>
       
         <!-- Register buttons -->
         <div class="text-center">
