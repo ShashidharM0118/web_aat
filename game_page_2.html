@@ -35,9 +35,9 @@
         <li class="active " ><a href="#" >Home</a></li>
         <li class="active switch-btn" id = "switch-btn" ><a href="#"><label for="game-mode">Game-mode : </label> 
           <select name="game-mode" id="game-mode"> 
-              <option value="easy" class = "easy">Easy</option> 
-              <!-- <option value="medium" class = "medium">Medium</option>  -->
-              <option value="difficult" class = "difficult">Difficult</option> 
+            <!-- <option value="medium" class = "medium">Medium</option>  -->
+            <option value="difficult" class = "difficult">Difficult</option> 
+            <option value="easy" class = "easy">Easy</option> 
           </select></a></li>
         <li class="active "  ><a href="#">logout </a></li>
       
@@ -94,16 +94,16 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <script>
       let currentScript = document.createElement('script');
-          currentScript.src = 'js/game_page(3X3).js';
+          currentScript.src = 'js/game_page.js';
           document.body.appendChild(currentScript);
 
-       let  gameMode = document.getElementById("game-mode");
+          let  gameMode = document.getElementById("game-mode");
 
-       gameMode.addEventListener('change',function(){
+gameMode.addEventListener('change',function(){
 
-          window.location.href = "game_page_2.html";
+   window.location.href = "game_page.html";
 
-       })
+})
   </script>
 </body>
 </html>
